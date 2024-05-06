@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Fredoka+One&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --plus-minus: 15px;
+  --clear-all-font: 25px;
+  --multiply-font: 30px;
+  --exponentiation-font: 35px;
+  --general-font: 40px;
+  --minus-font: 45px;
+}
+
+body {
+  font-family: 'Chango', cursive;
+}
+
+span, div.button {
+  font-size: var(--general-font);
+}
+
+div#container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+div#result {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  width: 315px;
+  overflow-x: auto;
+  justify-content: center;
+}
+
+div#result span {
+  width: 100%;
+  padding: 0px 15px;
+  text-align: right;
+}
+
+div#result span {
+  white-space: nowrap;
+}
+
+div.button {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+  transition: background-color .3s;
+  width: 63px;
+  align-items: center;
+}
+
+div.button:hover {
+  background-color: rgba(46, 46, 46, 0.35);
+}
+
+div.row {
+  display: flex;
+}
+
+div#minus {
+  font-size: var(--minus-font);
+}
+
+div#multiply {
+  font-size: var(--multiply-font);
+}
+
+div#exponentiation {
+  font-size: var(--exponentiation-font);
+}
+
+div#plus-minus {
+  font-size: var(--plus-minus-font);
+}
+
+div#clear-all {
+  font-size: var(--clear-all-font);
+}
+
+div.button, div#result {
+  display: flex;
+  border: black 1px solid;
+}
+
+div.button {
+  justify-content: center;
+}
+
+@media (max-width: 315px) {
+  div.button {
+    width: calc(100vw / 5);
+  }
+
+  div#result {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 250px) {
+  :root {
+    --plus-minus: calc(10vw - 50px);
+    --clear-all-font: 10vw;
+    --multiply-font: calc(10vw + 4px);
+    --exponentiation-font: calc(10vw + 6px);
+    --general-font: calc(10vw + 10px);
+    --minus-font: 10vw;
+  }
+}
